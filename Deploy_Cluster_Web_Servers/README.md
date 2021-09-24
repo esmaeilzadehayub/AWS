@@ -8,7 +8,27 @@ AWS take care of it for by you using an Auto Scaling Group (ASG) An ASG takes ca
 automatically, including launching a cluster of EC2 Instances, monitoring the health of each Instance, replacing failed Instances, and adjusting the size
 of the cluster in response to load.
 
+**aws instance**
+
+```python
+resource "aws_instance" "example" {
+ ami = "ami-40d28157"
+ instance_type = "t2.micro"
+ vpc_security_group_ids = ["${aws_security_group.instance.id}"]
+ user_data = <<-EOF
+ #!/bin/bash
+ echo "Hello, World" > index.html
+ nohup busybox httpd -f -p 8080 &
+ EOF
+ tags {
+ Name = "terraform-example"
+ }
+}
+```
+
 ![image](https://user-images.githubusercontent.com/28998255/134624073-3a3e0426-9ae0-434f-8c46-2934ea995dd5.png)
+
+**AWS 
 
 **The first step in creating an ASG is to create a launch configuration, which
 specifies how to configure each EC2 Instance in the ASG**
