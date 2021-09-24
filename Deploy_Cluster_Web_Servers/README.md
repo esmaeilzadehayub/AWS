@@ -8,7 +8,13 @@ AWS take care of it for by you using an Auto Scaling Group (ASG) An ASG takes ca
 automatically, including launching a cluster of EC2 Instances, monitoring the health of each Instance, replacing failed Instances, and adjusting the size
 of the cluster in response to load.
 
-**aws instance**
+
+![image](https://user-images.githubusercontent.com/28998255/134624073-3a3e0426-9ae0-434f-8c46-2934ea995dd5.png)
+
+
+
+**AWS enstance**
+
 
 ```python
 resource "aws_instance" "example" {
@@ -25,10 +31,6 @@ resource "aws_instance" "example" {
  }
 }
 ```
-
-![image](https://user-images.githubusercontent.com/28998255/134624073-3a3e0426-9ae0-434f-8c46-2934ea995dd5.png)
-
-**AWS 
 
 **The first step in creating an ASG is to create a launch configuration, which
 specifies how to configure each EC2 Instance in the ASG**
