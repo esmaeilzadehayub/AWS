@@ -8,5 +8,7 @@ AWS take care of it for by you using an Auto Scaling Group (ASG) An ASG takes ca
 automatically, including launching a cluster of EC2 Instances, monitoring the health of each Instance, replacing failed Instances, and adjusting the size
 of the cluster in response to load.
 
+[image](http://images-20200215.ebookreading.net/19/3/3/9781491977071/9781491977071__terraform-up-and__9781491977071__assets__tuar_0209.png)
+
 
 
